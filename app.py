@@ -3,6 +3,9 @@ import plotly.express as px
 import streamlit as st
      
 car_data = pd.read_csv(r'C:\Users\charl\OneDrive\Documentos\Python Scripts\ProyectoSprint7\vehicles_us.csv') # leer los datos
+
+st.header("_Información sobre las ventas de coches_ por :blue[Carlos Ibarra]:")
+
 hist_button = st.button('Construir histograma') # crear un botón
 
 if hist_button: # al hacer clic en el botón
@@ -32,7 +35,7 @@ if hist_button: # al hacer clic en el botón
 build_scatter = st.checkbox('Construir gráfico de dispersión')
 
 if build_scatter: # si la casilla de verificación está seleccionada
-    st.write('Construir un histograma para la columna odómetro')
+    st.write('Creación de un gráfico de dispersión para el conjunto de datos de anuncios de venta de coches')
 
     # crear un histograma
     fig = px.scatter(car_data, x="odometer", y="price") # crear un gráfico de dispersión
